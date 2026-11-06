@@ -1,0 +1,25 @@
+:root { color-scheme: dark; font-family: Arial, sans-serif; background: #000; color: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; min-height: 100svh; background: #000; }
+.app { width: 100%; max-width: 500px; margin: 0 auto; padding-top: env(safe-area-inset-top, 0px); }
+.card-screen { position: relative; width: 100%; }
+.screen { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
+.hotspot { position: absolute; top: .98%; width: 10.4%; height: 5.05%; min-height: 40px; min-width: 40px; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.hotspot:focus-visible { outline: 3px solid #fff0a5; outline-offset: 4px; }
+.hotspot:active { background: #ffffff20; }
+.hotspot[disabled] { cursor: wait; }
+.close { left: 4.6%; }
+.more { right: 4.6%; }
+.more[aria-busy="true"] { box-shadow: 0 0 0 2px #f7e7ab; }
+.qr-panel { position: absolute; left: 32.55%; top: 51.71%; width: 34.9%; height: 18.76%; margin: 0; border-radius: 3.7%; background: #fff; color: #000; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.qr-image { width: 100%; aspect-ratio: 1; flex-shrink: 0; }
+.qr-image svg { width: 100%; height: 100%; display: block; }
+.qr-panel figcaption { font-size: clamp(11px, 3.2vw, 16px); font-weight: 600; line-height: 1.2; letter-spacing: -.03em; margin-top: -3.5%; padding-bottom: 5%; }
+[hidden] { display: none !important; }
+.toast { position: fixed; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); padding: 13px 18px; border: 1px solid #ffffff25; border-radius: 14px; background: #252525; color: #fff; font-size: 14px; line-height: 1.45; box-shadow: 0 8px 35px #0009; z-index: 10; }
+.toast.error { border-color: #b63642; }
+.closed { min-height: 85svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+.coffee-mark { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 22px; background: #a40c24; color: #f7e7ab; font-size: 46px; }
+.closed h1 { font-size: 22px; font-weight: 500; margin: 0; }
+.closed button { padding: 14px 24px; border: 0; border-radius: 30px; background: #a40c24; color: white; font: inherit; cursor: pointer; }
+.no-script { text-align: center; padding: 20px; }

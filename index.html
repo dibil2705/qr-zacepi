@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Мобильная карта Зацепи Кофе. Генерация QR-кодов в браузере, в том числе без интернета.">
+  <title>Зацепи Кофе · Карта гостя</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQ0IiBmaWxsPSIjYTQwYzI0Ii8+PHRleHQgeD0iOTYiIHk9IjEzNyIgZmlsbD0iI2Y3ZTdhYiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIj7QlzwvdGV4dD48L3N2Zz4K" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main class="app" aria-label="Карта гостя Зацепи Кофе">
+    <section class="card-screen" id="card-screen" aria-label="Бонусная карта">
+      <img class="screen" src="./card.png" width="1290" height="2646" alt="Зацепи Кофе. Любимый гость: Инакентий А. Баланс: 186 на 21.10.2026. Ваш бонус: 5%.">
+      <button id="close" class="hotspot close" aria-label="Скрыть карту" title="Скрыть карту"></button>
+      <button id="generate" class="hotspot more" aria-label="Сгенерировать новый QR-код" title="Новый QR-код без повторов" disabled></button>
+      <figure class="qr-panel" id="qr-panel" hidden aria-label="Сгенерированный QR-код">
+        <div id="qr-image" class="qr-image"></div>
+        <figcaption id="qr-number"></figcaption>
+      </figure>
+    </section>
+    <section class="closed" id="closed" hidden>
+      <span class="coffee-mark" aria-hidden="true">З</span>
+      <h1>Карта скрыта</h1>
+      <button id="reopen">Открыть карту</button>
+    </section>
+  </main>
+  <div id="status" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="no-script">Включите JavaScript, чтобы генерировать QR-коды.</p></noscript>
+</body>
+</html>
