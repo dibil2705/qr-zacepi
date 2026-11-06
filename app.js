@@ -2199,7 +2199,7 @@
   }
   function qrSVG(value) {
     const qr = makeQR(value);
-    const border = 4;
+    const border = 2;
     const size = qr.modules.size + border * 2;
     let path = "";
     for (let y = 0; y < qr.modules.size; y++) {
@@ -2234,7 +2234,7 @@
   function show(state) {
     if (!(state == null ? void 0 : state.last)) return;
     document.querySelector("#qr-image").innerHTML = qrSVG(state.last);
-    document.querySelector("#qr-number").textContent = state.last;
+    document.querySelector("#qr-number").textContent = "+79176" + String(state.last).slice(-6);
     panel.hidden = false;
     button.title = `\u041D\u043E\u0432\u044B\u0439 QR-\u043A\u043E\u0434 \xB7 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C ${(TOTAL - state.count).toLocaleString("ru-RU")}`;
   }
